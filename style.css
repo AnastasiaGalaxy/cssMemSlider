@@ -2,7 +2,6 @@ html, body {
     width: 100%;
     height: 100%;
     background-color:aliceblue;
-    /* overflow-y: hidden; */
 
     padding: 0;
     margin: 0;
@@ -43,6 +42,16 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+@media (max-width: 720px) {
+    .text-and-controls-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .text-container {
+        text-align: start;
+        width: 21rem;
+    }
 }
 
 span {
@@ -159,47 +168,6 @@ input {
     animation-name: textFading;
     animation-duration: 3s;    
 }
-/* #first:checked ~ .pictures #second-pic{
-    display: none;
-  }
-  #first:checked ~ .pictures #third-pic{
-    display: none;
-  }
-  #first:checked ~ .text-and-controls-container #second-text{
-    display: none;
-  }
-  #first:checked ~ .text-and-controls-container #third-text{
-    display: none;
-  }
-
-
-  #second:checked ~ .pictures #first-pic{
-    display: none;
-  }
-  #second:checked ~ .pictures #third-pic{
-    display: none;
-  }
-  #second:checked ~ .text-and-controls-container #first-text{
-    display: none;
-  }
-  #second:checked ~ .text-and-controls-container #third-text{
-    display: none;
-  }
-
-
-  #third:checked ~ .pictures #first-pic{
-    display: none;
-  }
-  #third:checked ~ .pictures #second-pic{
-    display: none;
-  }
-  #third:checked ~ .text-and-controls-container #first-text{
-    display: none;
-  }
-  #third:checked ~ .text-and-controls-container #second-text{
-    display: none;
-  } */
-
 
 .radio .outer {
     height: 20px;
@@ -218,9 +186,7 @@ input {
 .radio .outer:active {
     background-color:blueviolet;
 }
-/* .radio.outer:focus {
-    background-color:coral;
-} */
+
 #first:checked ~ .text-and-controls-container .radio:nth-of-type(1) .outer {
     background-color:coral;
 }
