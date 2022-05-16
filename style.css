@@ -2,7 +2,7 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: bisque;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 
     padding: 0;
     margin: 0;
@@ -34,37 +34,68 @@ html, body {
     justify-content: space-between;
 }
 
-.curcle-btn {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 0.5rem;
-}
-.curcle-btn:hover {
-    background-color: blue;
-    transition: 0.5s;
+span {
     cursor: pointer;
 }
-.curcle-btn:focus {
-    background-color: red;
-}
 
-.controls {
+/* input {
+    display: none;
+} */
+
+.pictures {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
-.controls div {
-    width: 2rem;
-    height: 2rem; 
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+#first:checked ~ .pictures #second-pic{
+    display: none;
+  }
+  #first:checked ~ .pictures #third-pic{
+    display: none;
+  }
+  #first:checked ~ .text-and-controls-container #second-text{
+    display: none;
+  }
+  #first:checked ~ .text-and-controls-container #third-text{
+    display: none;
+  }
 
-.controls div:hover {
-    cursor: pointer;
-}
 
+  #second:checked ~ .pictures #first-pic{
+    display: none;
+  }
+  #second:checked ~ .pictures #third-pic{
+    display: none;
+  }
+  #second:checked ~ .text-and-controls-container #first-text{
+    display: none;
+  }
+  #second:checked ~ .text-and-controls-container #third-text{
+    display: none;
+  }
+
+
+  #third:checked ~ .pictures #first-pic{
+    display: none;
+  }
+  #third:checked ~ .pictures #second-pic{
+    display: none;
+  }
+  #third:checked ~ .text-and-controls-container #first-text{
+    display: none;
+  }
+  #third:checked ~ .text-and-controls-container #second-text{
+    display: none;
+  }
+
+
+.radio .outer {
+    height: 20px;
+    width: 20px;
+    display: block;
+    float: left;
+    margin: 10px 9px 10px 10px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    background-color: #fff;
+  }
